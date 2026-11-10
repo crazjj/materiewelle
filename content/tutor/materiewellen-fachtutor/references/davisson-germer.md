@@ -1,0 +1,17 @@
+# Davisson–Germer: Befund, Geometrie und Vorhersage
+
+Der Versuch von 1927 untersucht Elektronenstreuung an einem Nickel-Einkristall. Eine Quelle liefert Elektronen, eine Spannung beschleunigt sie, der Kristall stellt eine periodische Struktur bereit und ein beweglicher Detektor erfasst Beiträge bei verschiedenen Richtungen. Der Detektor zeigt keine Wellenlänge unmittelbar an. Eine bevorzugte Richtung ist zunächst eine Beobachtung. Die Deutung als Beugung verbindet diesen Befund mit einer Strukturanordnung und einer Geometrie.
+
+## Zwei ausdrücklich verschiedene Konstruktionen
+
+Allgemeine Bragg-Geometrie: parallele Netzebenen mit senkrechtem Abstand d, Winkel θ zur Ebene, zwei Zusatzstrecken d sinθ. Konstruktive Überlagerung gleichwelliger kohärenter Beiträge verlangt 2d sinθ = nλ. Winkel zur Ebene, zur Normalen und zwischen Strahlrichtungen sind nicht dieselbe Größe. Die Aufforderung, einen beliebigen DG-Winkel immer zu halbieren, ist falsch. Erst Zeichnung und Bezugslinien klären.
+
+Der ausgewählte quantitative Fall stammt aus der didaktischen Sekundäranalyse D2: etwa 54 eV und ungefähr 50°. Das Projekt benutzt dazu eine vereinfachte Ni(111)-Oberflächenkonstruktion mit normalem Einfall. Aus dem unabhängig gesetzten Gitterparameter a = 0,352 nm wird für ausgewählte parallele Reihen des Dreiecksnetzes D = a√(3/8) ≈ 0,215555 nm. Die Detektorprojektion liegt im betrachteten Schnitt quer zu diesen Reihen. Zwischen Nachbarreihen bleibt der auslaufende Gangunterschied D sinφ; φ bezieht sich auf die äußere Oberflächennormale. Erste Ordnung liefert λ_geo = D sinφ. Gleichphasiger normaler Einfall und kohärent-elastische Beiträge gleicher Wellenlänge sind Voraussetzungen; bei verändertem Azimut darf die reduzierte Formel nicht blind übernommen werden.
+
+D ist weder der Ni(111)-Netzebenenabstand a/√3 noch pauschal 91 pm. d und D sind nicht austauschbar. Bragg erklärt das allgemeine Beugungsprinzip; der ausgewählte Zahlenvergleich verwendet die getrennt bezeichnete Oberflächenkonstruktion. Keine unbelegte zusätzliche Ebene erfinden und den Strukturwert nicht auf das gewünschte Ergebnis anpassen.
+
+## Unabhängig rechnen
+
+Aus Beschleunigung aus Ruhe gilt E_kin=eU. Nichtrelativistisch p=√(2m_e eU); die zusätzliche de-Broglie-Hypothese ergibt λ_NR=h/p. Für 54 V: etwa 0,166895 nm. Aus D und ungefähr 50° folgt rechnerisch etwa 0,165125 nm. Mit (λ_geo−λ_NR)/λ_NR beträgt die relative Differenz ungefähr −1,1 Prozent. Vorzeichen und Nenner ausdrücklich nennen. Erst am Schluss runden; der grobe historische Winkel rechtfertigt keine behauptete Messgenauigkeit der Kontrollziffern.
+
+D2 ist Suzuki/Suzuki, arXiv:1307.6049v1 (2013), Seiten 2 und 5–6, https://arxiv.org/abs/1307.6049v1. Die genannten Seiten der Sekundäranalyse und die ausgewählte Geometrie wurden im Projekt geprüft; einzelne Darstellungsfehler in der Veröffentlichung sind bekannt. D1, Davisson/Germer, Physical Review 30 (1927), S. 705–740, https://doi.org/10.1103/PhysRev.30.705, wurde nicht selbst als Originaldatensatz eingesehen. Historische Unsicherheiten sind nicht belegt. Daher keine statistische Übereinstimmung, erfundenen Fehlerbalken oder perfekt bestätigende Messreihe behaupten. Verwende für den historischen Vergleich nur den hier belegten Fall mit 54 eV und ungefähr 50°; ungesicherte Zahlenreihen sind keine Bestätigungsgrundlage. Aktuelle Reglerwerte gehören zum Lehrmodell. Geänderte Einstellungen sind Modellvariationen, keine zusätzlichen historischen Messpunkte.

@@ -1,0 +1,11 @@
+site:
+  title: "Materiewellen · Physik LK"
+server:
+  files:
+    dev:
+      contentRoot: "build/processedResources/js/main/public"
+      script: "build/kotlin-webpack/js/developmentExecutable/materiewellen.js"
+    prod:
+      script: "build/kotlin-webpack/js/productionExecutable/materiewellen.js"
+      siteRoot: ".kobweb/site"
+  port: 8080

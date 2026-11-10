@@ -1,0 +1,84 @@
+name: Release artifacts per commit
+
+on:
+  push:
+    branches: ['**']
+  workflow_dispatch:
+    inputs:
+      commit:
+        description: 'Full public commit SHA; empty builds the selected branch head'
+        type: string
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    outputs:
+      matrix: ${{ steps.commits.outputs.matrix }}
+      count: ${{ steps.commits.outputs.count }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Test delivery contracts
+        run: |
+          for test in .github/scripts/test-*.py; do python3 "$test"; done
+      - id: commits
+        name: Select every pushed public commit
+        run: python3 .github/scripts/release-plan.py
+      - name: Reserve immutable commit tags before builds
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_MATRIX_JSON: ${{ steps.commits.outputs.matrix }}
+        run: python3 .github/scripts/reserve-release-tags.py
+
+  release:
+    needs: plan
+    if: needs.plan.outputs.count != '0'
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    concurrency:
+      group: release-${{ matrix.commit }}
+      cancel-in-progress: false
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.commit }}
+          fetch-depth: 0
+      - uses: ./.github/actions/setup
+      - name: Test sources and build both static exports
+        run: .github/scripts/validate-product.sh
+      - name: Verify all six root suites and three subpath suites
+        run: python .github/scripts/run-ci.py --log release-evidence/browser-ci.log -- python .github/scripts/check-release-web.py
+      - name: Prepare complete release assets
+        env:
+          RELEASE_COMMIT: ${{ matrix.commit }}
+        run: python .github/scripts/prepare-release.py --commit "$RELEASE_COMMIT" --output release-files
+      - name: Open both extracted release archives
+        run: python .github/scripts/check-release-archives.py --assets release-files --output release-evidence/archives.json
+      - name: Save browser screenshots, reports and release assets
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-${{ matrix.commit }}
+          path: |
+            release-files/
+            release-evidence/
+          if-no-files-found: warn
+          retention-days: 14
+      - name: Publish complete commit release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_COMMIT: ${{ matrix.commit }}
+        run: python .github/scripts/publish-release.py --commit "$RELEASE_COMMIT" --assets release-files

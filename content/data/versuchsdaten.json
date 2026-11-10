@@ -1,0 +1,265 @@
+{
+  "schema_version": "2.0",
+  "purpose": "Fachlich ausgewählte Abgabebasis: D2-Sekundärbefund, unabhängiges Ni(111)-Strukturmodell und relative J1-Bildmessung.",
+  "verification_notice": "D2, J1, J2, H1 und H3 im dokumentierten Umfang eingesehen. DG verwendet ausschließlich D2: 54 eV und ungefähr 50°, keine originalgeprüfte D1-Messreihe. Der frühe KI-Projektplan und dessen sechs DG-Paare sind als Belegbasis ausgeschlossen. J1 ist eine gekürzte Übersetzung; relative Bildmessung ist keine absolute Kalibrierung.",
+  "local_source_sha256": {
+    "referenzen/aufgabenstellung.pdf": "50ea26636d7c3cef79e95fc13bc9c24665a194af2a8560dcb451d70c0a4edaf6",
+    "referenzen/projektplan_fassung2.pdf": "4d2fa510186a2c7bfa0ed08dadf644ea5c8c0882fa43910dc982cdf1180e86fe"
+  },
+  "constants": {
+    "h": {
+      "value": 6.62607015e-34,
+      "unit": "J s",
+      "status": "SI definition, exact"
+    },
+    "e": {
+      "value": 1.602176634e-19,
+      "unit": "C",
+      "status": "SI definition, exact; positive magnitude"
+    },
+    "c": {
+      "value": 299792458,
+      "unit": "m s^-1",
+      "status": "SI definition, exact"
+    },
+    "electron_mass": {
+      "value": 9.1093837139e-31,
+      "unit": "kg",
+      "status": "CODATA 2022 value used; NIST source not opened in this run"
+    }
+  },
+  "de_broglie": {
+    "kind": "model_calculation",
+    "nonrelativistic": true,
+    "assumptions": [
+      "electron initially at rest",
+      "U is positive accelerating voltage magnitude",
+      "kinetic energy eU",
+      "free electron momentum after acceleration"
+    ],
+    "reference_voltages_V": [
+      150,
+      600
+    ],
+    "source": "Aufgabenstellung S.1; 600-V-Vergleich als gewählter Kontrollfall"
+  },
+  "davisson_germer": {
+    "id": "dg-d2-ni111",
+    "kind": "secondary_report",
+    "status": "D2-Sekundäranalyse im angegebenen Umfang geprüft; D1 nicht eingesehen",
+    "original_verified": false,
+    "display_warning": "D2-Sekundärbefund: 54 eV, φ ≈ 50°. D1-Original nicht eingesehen; historische Unsicherheiten unbekannt. Keine Präzisions- oder statistische Übereinstimmungsbehauptung.",
+    "evidence": {
+      "role": "secondary_report",
+      "review_status": "checked_in_scope",
+      "source_id": "D2",
+      "location": "S. 2, Abb. 2; S. 5, letzter Absatz: K = 54 eV und φ = 50°",
+      "scope": "Sekundär berichteter grober Elektronenbeugungsbefund, keine eigene Digitisierung oder Primärtranskription."
+    },
+    "geometry": {
+      "model": "ni111_surface_rows_normal_incidence",
+      "incident_beam": "normal to Ni(111) surface",
+      "phi_definition": "angle from outward surface normal to detector direction",
+      "angle_reference": "outward_surface_normal",
+      "D_definition": "perpendicular separation of selected parallel rows in the Ni(111) triangular surface lattice; outgoing tangential projection perpendicular to rows",
+      "lattice_constant_m": 3.52e-10,
+      "diffraction_order": 1,
+      "formula": "n * lambda = D * sin(phi)",
+      "spacing_formula": "D = a * sqrt(3/8)",
+      "structure_evidence": {
+        "role": "independent_structure_assumption",
+        "review_status": "checked_in_scope",
+        "source_id": "D2",
+        "location": "S. 2, Abb. 2: a = 3.52 Å; S. 5, Abb. 6 und Gl. (33)–(34)",
+        "scope": "Deklariertes fcc-Ni(111)-Oberflächenmodell; D aus a geometrisch, unabhängig vom Elektronenwinkel berechnet."
+      },
+      "limitations": [
+        "D is not the Bragg interplanar spacing d; d111 = a/sqrt(3).",
+        "Normal incidence and one selected surface azimuth are assumed; other row directions have different projections.",
+        "No complete intensity scan or intensity law is supplied.",
+        "No historical uncertainty is established.",
+        "D must not be fitted from the electron wavelength being tested."
+      ]
+    },
+    "rows": [
+      {
+        "id": "dg-54ev-ni111-50deg",
+        "voltage_V": 54,
+        "kinetic_energy_eV": 54,
+        "phi_deg": 50,
+        "angle_approximate": true,
+        "kind": "secondary_report"
+      }
+    ],
+    "historical_uncertainties": null,
+    "used_in_main_example": "dg-54ev-ni111-50deg",
+    "excluded_materials": [
+      {
+        "id": "dg-plan-table-ii",
+        "source_id": "P2",
+        "reason": "Sechs nur im verworfenen KI-Projektplan nachgewiesene Paare; keine unabhängig geprüfte historische Belegbasis. Nur im privaten Projektarchiv, nicht in der aktiven Auswertung."
+      }
+    ]
+  },
+  "jonsson": {
+    "status": "eingesehen und passend geprüft (J1-Übersetzung); relative Bildmessung durchgeführt",
+    "original_verified": true,
+    "display_warning": "Relative Pixelmessung am Originalscan; 50-kV-Parameterrechnung getrennt. Keine absolute Bildkalibrierung.",
+    "parameter_model": {
+      "kind": "nominal_parameters_from_original_report_English_translation",
+      "voltage_V": 50000,
+      "slit_width_m": 5e-07,
+      "slit_center_spacing_m": 2e-06,
+      "observation_distance_m": 0.35,
+      "distance_definition": "distance in simplified observation geometry; not arbitrary final detector distance through electron lenses",
+      "local_source": {
+        "file": "vorarbeit/quellen/originale/jonsson-1974.pdf",
+        "pdf_pages": [
+          2,
+          5,
+          6
+        ],
+        "printed_pages": [
+          5,
+          8,
+          9
+        ],
+        "scope": "Gekürzte englische Übersetzung; nominale Artikelparameter, keine sichere Zuordnung der Spannung zum ausgewerteten Foto.",
+        "availability": "private_project_archive_not_in_public_repository; public bibliographic record: content/sources/README.md#j1-image"
+      },
+      "formula": "fringe_spacing = observation_distance * relativistic_wavelength / slit_center_spacing",
+      "primary_source": {
+        "source_id": "J1",
+        "voltage_printed_pages": [
+          5,
+          8
+        ],
+        "slits_printed_page": 8,
+        "observation_distance_printed_page": 9
+      },
+      "parameter_caveats": [
+        "Text says 50 kV; Fig.6 schematic labels 40 kV. 50 kV is a declared text-based calculation case, not verified per-photograph exposure voltage.",
+        "J1 notes slit-width and spacing variations; no per-image parameter uncertainty established.",
+        "Observation plane has electron optics and is followed by further magnification; no absolute photographic scale established."
+      ],
+      "supporting_source": {
+        "source_id": "J2",
+        "title": "Abiturprüfung Sachsen-Anhalt 2025, Physik erhöhtes Anforderungsniveau",
+        "page": 18,
+        "material": "1/2",
+        "status": "J2 p.18 b,g,L checked, 50kV excerpt not present in public file"
+      }
+    },
+    "image": {
+      "available": true,
+      "file": "content/sources/jonsson-page6-xref33.png",
+      "file_base": "repository_root",
+      "native_width_px": 703,
+      "native_height_px": 242,
+      "coordinate_origin": "upper left of entire embedded raster containing Fig.7 left and Fig.8 right; x right, y down",
+      "markers_px": [
+        551,
+        564,
+        578,
+        592,
+        606,
+        620,
+        634,
+        647
+      ],
+      "marker_y_px": 160,
+      "measurement_band_y_px": [
+        100,
+        220
+      ],
+      "display_crop_native_px": [
+        490,
+        0,
+        703,
+        242
+      ],
+      "absolute_calibration": null,
+      "sha256": "d8952b3336cb499884f2cbe600cc15645f8bc1c406b1c4e7f43f3bc4d9553bb6",
+      "source": {
+        "source_id": "J1",
+        "figure": "8 (right photograph); left is separate Fig.7",
+        "printed_page": 9,
+        "pdf_page": 6,
+        "embedded_image_xref": 33
+      },
+      "nominal_parameters_from_same_article_verified": true,
+      "per_image_voltage_and_magnification_verified": false,
+      "association_with_J2_parameters_verified": false,
+      "status": "embedded image extracted without resizing; Fig.8 visually verified"
+    },
+    "relative_measurement": {
+      "status": "performed_and_independently_reproduced",
+      "formula": "mean_spacing_px = (x_N - x_0) / N for N intervals and N+1 maxima",
+      "maxima_x_px": [
+        551,
+        564,
+        578,
+        592,
+        606,
+        620,
+        634,
+        647
+      ],
+      "individual_gaps_px": [
+        13,
+        14,
+        14,
+        14,
+        14,
+        14,
+        13
+      ],
+      "interval_count": 7,
+      "mean_spacing_px": 13.714285714285714,
+      "precision_notice": "About 14 native pixels; other y-bands give 13.857 px. Extra digits document arithmetic, not historical precision.",
+      "protocol_file": "content/measurement/joensson_sensitivitaet.json",
+      "script_file": "content/measurement/sensitivitaet.py",
+      "independent_review": "Didactics reviewer reproduced same positions using an independent local-maxima algorithm; maths reviewer obtained 13.714–13.857 px using different bands. Reviews separately documented.",
+      "forbidden_shortcut": "No physical scale inferred from model wavelength; grayscale profile is not calibrated electron intensity.",
+      "previous_private_analysis": {
+        "protocol_file": "vorarbeit/quellen/joensson_bildmessung.json",
+        "script_file": "vorarbeit/quellen/joensson_bildmessung.py",
+        "availability": "private_project_archive_not_in_public_repository; original scipy.find_peaks analysis, independently reproduced by the public window-argmax script"
+      }
+    },
+    "original_verification_scope": "1974 abridged English translation of 1961 original; selected text and Fig.8 visually checked, not the German 1961 full text"
+  },
+  "source_ids": {
+    "A1": {
+      "kind": "provided_assignment",
+      "path": "referenzen/aufgabenstellung.pdf",
+      "status": "eingesehen und passend geprüft",
+      "availability": "private_project_archive_not_in_public_repository"
+    },
+    "P2": {
+      "kind": "provided_project_plan",
+      "path": "referenzen/projektplan_fassung2.pdf",
+      "status": "Verworfener KI-Projektplan; keine fachliche oder historische Autorität und keine aktive DG-Datenquelle.",
+      "availability": "private_project_archive_not_in_public_repository"
+    },
+    "D1": {
+      "url": "https://journals.aps.org/pr/pdf/10.1103/PhysRev.30.705",
+      "status": "Origin 403; official Harvest endpoint latest 401 Unauthorized; original not read"
+    },
+    "D2": {
+      "url": "https://arxiv.org/pdf/1307.6049",
+      "status": "eingesehen und passend geprüft im privaten Ausgangsprojekt; Prüfumfang: content/sources/README.md",
+      "kind": "didactic_secondary_analysis"
+    },
+    "J1": {
+      "url": "https://web.pdx.edu/~pmoeck/pdf/ElectronJonsson.PDF",
+      "status": "eingesehen und passend geprüft im privaten Ausgangsprojekt; Prüfumfang: content/sources/README.md",
+      "kind": "abridged_english_translation_of_historical_report"
+    },
+    "J2": {
+      "url": "https://www.bildung-lsa.de/files/7b813937649657c8710d2f97f06bb735/2025_Phy_eAN_Aufgaben_V.pdf",
+      "status": "eingesehen und passend geprüft im privaten Ausgangsprojekt; Prüfumfang: content/sources/README.md"
+    }
+  },
+  "private_archive_notice": "Paths under referenzen/ and vorarbeit/ identify provenance in the private project archive; these files are not distributed in this repository. Recorded checks refer to that archive, not a new source review. Public source scope and image reuse status: content/sources/README.md."
+}

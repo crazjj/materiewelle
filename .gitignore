@@ -1,0 +1,25 @@
+# Local tools, caches and generated outputs
+.tools/
+**/.gradle/
+**/.kotlin/
+/apps/web/**/build/
+/packages/*/build/
+**/node_modules/
+**/__pycache__/
+**/.venv/
+*.pyc
+*.pid
+.DS_Store
+**/.kobweb/server/
+**/.kobweb/site/
+**/.vercel/
+**/local.properties
+apps/web/.build-static.lock
+apps/web/dist*/
+content/typst/math/ausgabe/
+content/typst/math/vorschau/
+content/typst/ausgabe/
+release-files/
+release-evidence/
+release-build/
+public-artifact/

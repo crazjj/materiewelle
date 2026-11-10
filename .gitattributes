@@ -1,0 +1,11 @@
+* text=auto
+*.pdf binary
+*.png binary
+*.ttf binary
+*.otf binary
+*.woff2 binary
+*.wasm binary
+
+# Preserve upstream font notices byte-for-byte, including original line endings.
+apps/web/site/src/jsMain/resources/public/fonts/*.txt -text -whitespace
+content/licenses/DejaVu-LICENSE.txt -whitespace

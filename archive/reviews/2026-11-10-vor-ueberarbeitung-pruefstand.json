@@ -1,0 +1,646 @@
+{
+  "schema_version": 2,
+  "summarized_at": "2026-11-10T15:35:53.624083+00:00",
+  "scope": "Top-level broad results and previous_change_verifications are historical. latest_change_verification describes the current root export; no hosted CI or live deployment claim.",
+  "source_snapshot_note": "Bound by the product input hashes below, independently of the subsequently consolidated Git commit metadata.",
+  "kotlin": {
+    "test_executions": 528,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "source_summary_sha256": "a123f9cf8453b143276c77c8091586142c45e70d139c57c394a75f16aacf5492",
+    "suites": [
+      {
+        "suite": "packages/physics-core/build/test-results/jvmTest",
+        "tests": 202,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "packages/physics-core/build/test-results/jsNodeTest",
+        "tests": 191,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "apps/web/browser-design/build/test-results/jsNodeTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "suite": "apps/web/site/build/test-results/jsNodeTest",
+        "tests": 130,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ]
+  },
+  "python": {
+    "counted_test_cases": 134,
+    "scripts_passed": 16,
+    "suites": [
+      {
+        "path": ".github/scripts/test-browser-checks.py",
+        "status": "passed",
+        "tests": 19,
+        "recheck_log": "python-recheck.log"
+      },
+      {
+        "path": ".github/scripts/test-build-release-web.py",
+        "status": "passed",
+        "tests": 2
+      },
+      {
+        "path": ".github/scripts/test-delivery-workflows.py",
+        "status": "passed",
+        "tests": 4
+      },
+      {
+        "path": ".github/scripts/test-prepare-vercel.py",
+        "status": "passed",
+        "tests": 8
+      },
+      {
+        "path": ".github/scripts/test-release-packaging.py",
+        "status": "passed",
+        "tests": 14
+      },
+      {
+        "path": ".github/scripts/test-release-plan.py",
+        "status": "passed",
+        "tests": 13
+      },
+      {
+        "path": ".github/scripts/test-release-publication.py",
+        "status": "passed",
+        "tests": 9
+      },
+      {
+        "path": ".github/scripts/test-reserve-release-tags.py",
+        "status": "passed",
+        "tests": 13
+      },
+      {
+        "path": "tools/build/test-package-delivery.py",
+        "status": "passed",
+        "tests": 10
+      },
+      {
+        "path": "content/typst/test-handout.py",
+        "status": "passed",
+        "tests": 11
+      },
+      {
+        "path": "content/tutor/test-compact-pack.py",
+        "status": "passed",
+        "tests": 4
+      },
+      {
+        "path": "apps/web/scripts/test-ui-contract.py",
+        "status": "passed",
+        "tests": 5
+      },
+      {
+        "path": "apps/web/scripts/test-math-text-build.py",
+        "status": "passed",
+        "tests": 15
+      },
+      {
+        "path": "apps/web/scripts/test-theme-bootstrap.py",
+        "status": "passed",
+        "tests": 3
+      },
+      {
+        "path": "apps/web/scripts/test-browser-assets.py",
+        "status": "passed",
+        "tests": null,
+        "recheck_log": "python-recheck.log"
+      },
+      {
+        "path": "apps/web/scripts/test-export-spa.py",
+        "status": "passed",
+        "tests": 4
+      }
+    ],
+    "log_sha256": {
+      "python-tests.log": "5c93ec885a0391cba53e9cce0b6dfc75c509aad8da37cd84bc7e43001907b9c2",
+      "python-recheck.log": "2ac80375a3ad53ee378df6d4c22e55cad7d1604cf460bfdf6c7f117443cbe34b"
+    }
+  },
+  "browser_groups": [
+    {
+      "base_path": "/",
+      "status": "passed",
+      "suite_count": 6,
+      "browser": "Chromium 154.0.8037.57",
+      "receipt": "release-evidence/root-suites.json",
+      "receipt_sha256": "0a639fedefd633a5b039d706c6d2b133776e79890ec96c45fdc00d5564255b2a",
+      "manifest_sha256": "e60862b349ce785565a118992a70e9327b7a2b16add9ea321b05bc00b0ad2264",
+      "javascript_sha256": "0bc55457b89b59ace6963aadf84250735aa632b2a199bb1980b08439bea4233f",
+      "artifact_files_verified": 1397,
+      "suites": [
+        {
+          "suite": "main",
+          "status": "passed",
+          "scenario_executions": 8,
+          "assertions": 449,
+          "screenshots": 35,
+          "report": "release-evidence/root/report.json",
+          "report_sha256": "c388d28ce8f37b76b4721367c1309a9711b001dd54f36f7f67450cd02559255f"
+        },
+        {
+          "suite": "refinement",
+          "status": "passed",
+          "scenario_executions": 5,
+          "assertions": 241,
+          "screenshots": 40,
+          "report": "release-evidence/root-refinement/report.json",
+          "report_sha256": "99e39aa68ef01763fa20f4b278644df22a49f2d38d93463c4ed32826bc317eef"
+        },
+        {
+          "suite": "dg-learning",
+          "status": "passed",
+          "scenario_executions": 5,
+          "assertions": 537,
+          "screenshots": 35,
+          "report": "release-evidence/root-dg-learning/report.json",
+          "report_sha256": "4ef503dd7f9f18854563969d12d5960b8ccdc876f35105e289927137529f1b5d"
+        },
+        {
+          "suite": "ownership",
+          "status": "passed",
+          "scenario_executions": 6,
+          "assertions": 88,
+          "screenshots": 6,
+          "report": "release-evidence/root-ownership/report.json",
+          "report_sha256": "16ba94967ebeba6f68dd8346d9feb54838308c9bbe825d3f671516998f90ef41"
+        },
+        {
+          "suite": "jonsson",
+          "status": "passed",
+          "scenario_executions": 2,
+          "assertions": 207,
+          "screenshots": 31,
+          "report": "release-evidence/root-jonsson/report.json",
+          "report_sha256": "939b418e703f61a70acf0e02340b93c1946053971890092abd4fd713442f6e0b"
+        },
+        {
+          "suite": "personal-report",
+          "status": "passed",
+          "scenario_executions": 2,
+          "assertions": 93,
+          "screenshots": 12,
+          "report": "release-evidence/root-personal-report/report.json",
+          "report_sha256": "1bc14eb8143b61b215292b2e4cd0ec7f3d52c777354d70b04f71a28c999a2c5c"
+        }
+      ],
+      "scenario_executions": 28,
+      "assertions": 1615,
+      "screenshots": 159
+    },
+    {
+      "base_path": "/materiewelle/",
+      "status": "passed",
+      "suite_count": 3,
+      "browser": "Chromium 154.0.8037.57",
+      "receipt": "release-evidence/subpath-suites.json",
+      "receipt_sha256": "6e5496a263cf69b32ff98e19970d106a437b208e26567f4dffea5cf91fa4c8c8",
+      "manifest_sha256": "7bc958bfe74ce0232b6e86d6d3d3793bca570c4faef876c382347ef99e468ae5",
+      "javascript_sha256": "99066242713d9a0582cc5a07b28241eea5d9fe93acabc3af5f829e8322e4e166",
+      "artifact_files_verified": 1397,
+      "suites": [
+        {
+          "suite": "main",
+          "status": "passed",
+          "scenario_executions": 8,
+          "assertions": 449,
+          "screenshots": 35,
+          "report": "release-evidence/subpath/report.json",
+          "report_sha256": "af9d133eaf43ef3ca7de75bede2129cc1f9a9b73a47201483eda2e22cd193023"
+        },
+        {
+          "suite": "refinement",
+          "status": "passed",
+          "scenario_executions": 5,
+          "assertions": 241,
+          "screenshots": 40,
+          "report": "release-evidence/subpath-refinement/report.json",
+          "report_sha256": "47970c92a1e9cfa1a3053c2d684519023488ab91b9c707eaef69bad4c58ade8b"
+        },
+        {
+          "suite": "dg-learning",
+          "status": "passed",
+          "scenario_executions": 5,
+          "assertions": 537,
+          "screenshots": 35,
+          "report": "release-evidence/subpath-dg-learning/report.json",
+          "report_sha256": "e6910b270afb9bafd3ab6eaa0d1c7a089e559dfb9988ef34d1f17cfc02e1c9d4"
+        }
+      ],
+      "scenario_executions": 18,
+      "assertions": 1227,
+      "screenshots": 110
+    }
+  ],
+  "product_inputs": {
+    "count": 328,
+    "canonical_json_sha256": "81ed9d101e837fd32fffdb4fd7c4b3317bb7cebbc868c0c57eb5b2d8a86b5cfd",
+    "serialization": "UTF-8 JSON object sorted by path, separators comma and colon, no whitespace or trailing newline",
+    "root_and_subpath_match": true,
+    "all_matched_tested_working_tree": true,
+    "scope": "Earlier broad acceptance snapshot, not the current working tree."
+  },
+  "handout": {
+    "repository_file": "docs/handout.pdf",
+    "sha256": "5672525b4afa441979fa6d441975a511699eb3a38b1887b0c311e236bdd55088",
+    "matches_both_browser_downloads": true,
+    "pages": 3
+  },
+  "qr_sheet": {
+    "repository_file": "docs/website-qr-a4.pdf",
+    "source": "content/typst/qr/website.typ",
+    "sha256": "3224edb2945c24fca5ea432e2c7fb42598756c9a5ac11ea18d7b2b233f0a58a6",
+    "pages": 1,
+    "paper": "A4",
+    "decoded_target": "https://materiewelle.vercel.app/",
+    "decoded_from_rendered_pdf": true,
+    "repeat_build_byte_identical": true,
+    "verification_note": "Unchanged QR source/PDF; rendered decode and byte-identical rebuild were verified in the earlier 9 November acceptance round, not repeated for these unrelated UI changes."
+  },
+  "evidence_location": "Original reports, screenshots and exports are retained in the local acceptance package. This summary does not claim that package has been published.",
+  "not_verified": [
+    "hosted GitHub Actions execution",
+    "public Vercel revision",
+    "real iPad/Safari",
+    "real touch hardware",
+    "screenreader",
+    "human learning outcomes",
+    "personal subject work",
+    "public redistribution basis for the historical image"
+  ],
+  "release_zip_smoke": {
+    "status": "passed",
+    "report_sha256": "89c9465aa48b75342f2ba3b85cf36c9827c4c9b8d5785dfa17051f6dcb971c26",
+    "tested_candidate_commit": "7089a4487670726bb74981986277099c82e6b3e5",
+    "archives": [
+      {
+        "file": "materiewelle-web.zip",
+        "sha256": "e8ede32b2362cd4f48712863c5d611c53654d94fe7c7bd0a095bfbe8282a0168",
+        "base": "/",
+        "asset_count": 1397,
+        "page_errors": [],
+        "handout_sha256": "5672525b4afa441979fa6d441975a511699eb3a38b1887b0c311e236bdd55088",
+        "articles_opened": 4,
+        "native_markers": [
+          551,
+          578
+        ],
+        "tutor_section": "joensson",
+        "status": "passed"
+      },
+      {
+        "file": "materiewelle-web-subpath.zip",
+        "sha256": "f7d71489ee1dfbe355fb6b84283f00487ea38400b1faf36ab984af37099bbf1e",
+        "base": "/materiewelle/",
+        "asset_count": 1397,
+        "page_errors": [],
+        "handout_sha256": "5672525b4afa441979fa6d441975a511699eb3a38b1887b0c311e236bdd55088",
+        "articles_opened": 4,
+        "native_markers": [
+          551,
+          578
+        ],
+        "tutor_section": "joensson",
+        "status": "passed"
+      }
+    ],
+    "note": "Actual ZIP extraction and Chromium interaction. Final documentation changes do not alter the checked product inputs or ZIP bytes."
+  },
+  "previous_change_verifications": [
+    {
+      "recorded_at": "2026-11-09T16:29:48.322736+00:00",
+      "method": "Six complete original suite reports individually validated by browser_checks.verify_report against current harnesses and the same unchanged export. Earlier failed label assertions retained; this is not a successful first-pass all-group receipt.",
+      "manifest_sha256": "5a93c3c1160285ea3acbf833ee52b9050bf1d4e56efed7aaca626094531df774",
+      "product_inputs": 329,
+      "suites": [
+        {
+          "suite": "main",
+          "status": "passed",
+          "scenarios": 8,
+          "checks": 469,
+          "screenshots": 35,
+          "report_sha256": "866f9a9a8873464294128c9deaf611fbb442af683c1138ca56f089aac3377ef3"
+        },
+        {
+          "suite": "refinement",
+          "status": "passed",
+          "scenarios": 5,
+          "checks": 241,
+          "screenshots": 40,
+          "report_sha256": "f1e0fc76e0c04ccc992fc11b450540914cd389abcf31354bfdfb1bd56674906f"
+        },
+        {
+          "suite": "dg-learning",
+          "status": "passed",
+          "scenarios": 5,
+          "checks": 537,
+          "screenshots": 35,
+          "report_sha256": "7d287fd68619316bd5d3f9e07a1aa5d8d639c02de5b825478e415fff1a806762"
+        },
+        {
+          "suite": "ownership",
+          "status": "passed",
+          "scenarios": 6,
+          "checks": 90,
+          "screenshots": 6,
+          "report_sha256": "009e6f6e0073ada1173e9244561e6d452ec617db3b56bdce86031b5bcd1276c2"
+        },
+        {
+          "suite": "jonsson",
+          "status": "passed",
+          "scenarios": 2,
+          "checks": 207,
+          "screenshots": 31,
+          "report_sha256": "388a96287f873107d810472f02a409381d34c903b4e65698cb0e9f9c4a1c6385"
+        },
+        {
+          "suite": "personal-report",
+          "status": "passed",
+          "scenarios": 2,
+          "checks": 93,
+          "screenshots": 12,
+          "report_sha256": "f96b396916b3abec66c0eb7c62559e6e377764d2745a7581dbcf43603f1dd5e9"
+        }
+      ],
+      "totals": {
+        "scenarios": 28,
+        "checks": 1637,
+        "screenshots": 159
+      },
+      "kotlin": {
+        "website_js": 153,
+        "browser_design_js": 5,
+        "failures": 0,
+        "skipped": 0
+      },
+      "python": {
+        "tutor_package": 6,
+        "ui_contract_tests": 5,
+        "ui_contract_check": "passed"
+      },
+      "additional_ux_checks": 252,
+      "additional_storage_checks": 12,
+      "not_verified": [
+        "real iPad/Safari",
+        "screenreader",
+        "external AI responses",
+        "human learning outcomes",
+        "public deployment",
+        "new subpath export",
+        "new release archives"
+      ],
+      "ux_report_sha256": "80774160ea3ee6d59065657621fe13970b83daf4e10d935a673a756fb61c84b1",
+      "storage_report_sha256": "5a26503d5aeff352cbe1a618aa65d2e8b365b44a7fb2ac36d6eeee0ac83ff7be",
+      "scope": "Historical tutor revision before the current review implementation; no current-source assertion.",
+      "product_inputs_matched_then": true
+    },
+    {
+      "recorded_at": "2026-11-09T21:26:57.015424+00:00",
+      "scope": "Review implementation: DG geometry bridge, Jönsson workflow, opt-in phase extension, tutor/conclusion, derivation highlight, handout v1.6.",
+      "method": "Six complete original suite reports individually validated against current harnesses and the identical final export. Passed suites reused; affected suites fully rerun after old wording/order expectations were corrected. Earlier failed group receipts retained; no successful all-group runner receipt claimed.",
+      "earlier_group_receipts_sha256": {
+        "browser-v3/root-suites.json": "4fd341d8f5e1c8866cb03634e93d5fe30e07dc184b74f9e060441cab33b84355",
+        "browser-v4/root-suites.json": "af65296426eae9ccb1cc9118555b0e2c5656d190b2319dce090d2ac5dcb7d49b"
+      },
+      "manifest_sha256": "4701e70507abede38aebf67cdf98b56e84d937462b416cf7d9942495ac7cab64",
+      "javascript_sha256": "6e2e3cc359d6288aa9d9be7b81ad27d643806623114dffe82f00d42c4ed30ef6",
+      "browser": "Chromium 154.0.8037.57",
+      "deployment_base": "/",
+      "product_inputs": 331,
+      "artifact_files_verified": 1405,
+      "suites": [
+        {
+          "suite": "main",
+          "status": "passed",
+          "scenarios": 8,
+          "checks": 470,
+          "screenshots": 35,
+          "report_sha256": "44de1bbd2fafda6bf51caed69e070ee70e5e12be50605ed2162d87d0ce645ff7",
+          "report": "browser-v3/root/report.json"
+        },
+        {
+          "suite": "refinement",
+          "status": "passed",
+          "scenarios": 5,
+          "checks": 250,
+          "screenshots": 40,
+          "report_sha256": "38c6f9a89c06d3ca3733df19000fb74fc8c35fdbb79dfc5864cc4961baf9977c",
+          "report": "browser-v3/root-refinement/report.json"
+        },
+        {
+          "suite": "dg-learning",
+          "status": "passed",
+          "scenarios": 5,
+          "checks": 537,
+          "screenshots": 35,
+          "report_sha256": "93d7fa84d030dcd17f9562420fa5562f52424c9be7d4b145b6ea311410bdce55",
+          "report": "browser-v3/root-dg-learning/report.json"
+        },
+        {
+          "suite": "ownership",
+          "status": "passed",
+          "scenarios": 6,
+          "checks": 90,
+          "screenshots": 6,
+          "report_sha256": "84f6f1cebb8096840580f033aa2fc91a9bb662e50322cdc7bcd77342e512147e",
+          "report": "browser-v4/root-ownership/report.json"
+        },
+        {
+          "suite": "jonsson",
+          "status": "passed",
+          "scenarios": 2,
+          "checks": 214,
+          "screenshots": 32,
+          "report_sha256": "19aefb1091e39bff82914e2ce9c6c8903d0805571f62d7e9f21802a239c11a40",
+          "report": "browser-v4/root-jonsson/report.json"
+        },
+        {
+          "suite": "personal-report",
+          "status": "passed",
+          "scenarios": 2,
+          "checks": 93,
+          "screenshots": 12,
+          "report_sha256": "014152b5a68bdecc9f2f0b1a1357b60127891031e80c5dd23e11c3d3170c6e2d",
+          "report": "browser-v5/root-personal-report/report.json"
+        }
+      ],
+      "totals": {
+        "scenarios": 28,
+        "checks": 1654,
+        "screenshots": 160
+      },
+      "kotlin": {
+        "website_js": 160,
+        "browser_design_js": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "source_summary_sha256": "e9a864fa7b9e216b1cb3ed690e35c702170aa55c66393c6d5ad79df1152fe3dd"
+      },
+      "python": {
+        "handout": 11,
+        "tutor_package": 6,
+        "ui_contract_tests": 5,
+        "ui_contract_check": "passed",
+        "feature_files": 109,
+        "ui_rules": 14
+      },
+      "handout": {
+        "pages": 3,
+        "sha256": "ea045ed74899964be14f5f1dfc5c24eb20c88e6451338760b0f23b5bea9f1c29",
+        "matches_actual_browser_download": true,
+        "build_report_sha256": "91026f708484562a73d024024c07a1adf21f890508df3780584cf22f04fbc91d"
+      },
+      "additional_tutor_checks": 44,
+      "tutor_report_sha256": "0befb708d556e85298eeb567c0cb2840c7d20147ee6a5c591bad9a6e043d6f5f",
+      "tutor_harness_sha256": "3613871f4601301215ed5c68eff0cc915b08985cbcc6fa679ecc83e0f2fcc55e",
+      "additional_tutor_viewports": [
+        "1080x810 synthetic touch",
+        "1440x900 mouse"
+      ],
+      "corrected_findings": [
+        "Handout rectangle antialiasing seams replaced by computed continuous gradient.",
+        "Jönsson introduction shortened to retain first-image position at 1024x768.",
+        "DG table names precise structures.",
+        "Obsolete measurement wording and conclusion-order assertions updated to the reviewed intended behavior; all affected suites rerun.",
+        "Tutor return test distinguishes unchanged layout from disclosure-induced document-height changes; viewport-anchor tolerance remains unchanged."
+      ],
+      "not_verified": [
+        "real iPad/Safari",
+        "screenreader",
+        "external AI responses",
+        "human learning outcomes",
+        "public deployment",
+        "new subpath export",
+        "new release archives",
+        "public redistribution basis for the historical image"
+      ],
+      "historical": true,
+      "product_inputs_matched_then": true
+    }
+  ],
+  "latest_change_verification": {
+    "recorded_at": "2026-11-10T15:35:53.624083+00:00",
+    "scope": "Targeted final review fixes: explicit Jönsson explanation jump, distinct measurement actions, discoverable prediction, reader/author roles, handout v1.7.",
+    "method": "One complete successful all-group browser run against a fresh production root export. Additional independent direct-touch visual checks in both themes.",
+    "manifest_sha256": "4d2c274d20cb13631ac62c0dacb2d93dfaa3422424d0d4859b901afed464c952",
+    "receipt_sha256": "b725a71f7160c53c6b595dff3446cfd3580fb07baf69407aa426b78864e52e57",
+    "javascript_sha256": "94193330532d22a0df83e24d57619076008aee5c370c4f39cc08d0ada81ab264",
+    "browser": "Chromium 154.0.8037.57",
+    "deployment_base": "/",
+    "product_inputs": 331,
+    "product_inputs_match_current": true,
+    "artifact_files_verified": 1405,
+    "suites": [
+      {
+        "suite": "main",
+        "status": "passed",
+        "scenarios": 8,
+        "checks": 470,
+        "screenshots": 35,
+        "report_sha256": "96c3b38cb3f54d5a8692808adc4acbdbc9f1e431c9e95d58d08a04d329ba9dc4",
+        "report": "browser/root/report.json"
+      },
+      {
+        "suite": "refinement",
+        "status": "passed",
+        "scenarios": 5,
+        "checks": 356,
+        "screenshots": 48,
+        "report_sha256": "92a0f9a2fe48a4c7f8b4f9cca141bc4d0b76670ea72136c65edc298d84feb2a8",
+        "report": "browser/root-refinement/report.json"
+      },
+      {
+        "suite": "dg-learning",
+        "status": "passed",
+        "scenarios": 5,
+        "checks": 537,
+        "screenshots": 35,
+        "report_sha256": "f2ce2bcb9b36292c378a4d198278a3b822d541cb030e6a41f4002f22b0600f93",
+        "report": "browser/root-dg-learning/report.json"
+      },
+      {
+        "suite": "ownership",
+        "status": "passed",
+        "scenarios": 6,
+        "checks": 90,
+        "screenshots": 6,
+        "report_sha256": "e371b46b421565f8f30ce5171945a3826cfab55f1b2d17e025483b88efe49167",
+        "report": "browser/root-ownership/report.json"
+      },
+      {
+        "suite": "jonsson",
+        "status": "passed",
+        "scenarios": 2,
+        "checks": 214,
+        "screenshots": 32,
+        "report_sha256": "d789f355a485fdc6445bedb41289e5c4c24c8a66e8b4e06c8ae79efe4804b9fc",
+        "report": "browser/root-jonsson/report.json"
+      },
+      {
+        "suite": "personal-report",
+        "status": "passed",
+        "scenarios": 2,
+        "checks": 93,
+        "screenshots": 12,
+        "report_sha256": "5898181c43fcf14a72dd99752bac222bd1f927c0acdce1d74fb914a74359ec1b",
+        "report": "browser/root-personal-report/report.json"
+      }
+    ],
+    "totals": {
+      "scenarios": 28,
+      "checks": 1760,
+      "screenshots": 168
+    },
+    "kotlin": {
+      "website_js": 160,
+      "browser_design_js": 5,
+      "tests": 165,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "source_summary_sha256": "6970e9af88e92c91d6304fae58c4a5a4a6a6079dd39534ce35175451b7400d0d"
+    },
+    "python": {
+      "handout": 11,
+      "ui_contract_check": "passed",
+      "feature_files": 109,
+      "ui_rules": 14
+    },
+    "handout": {
+      "version": "1.7",
+      "pages": 3,
+      "sha256": "8e9d7f305660f1cb8d0beee5309f0f821adb4f43a6d26f19b162472385ce6995",
+      "matches_actual_browser_download": true,
+      "build_report_sha256": "12d16602dfa7c4c47299408cecdef568b0af09eaaa710742dfbd44f36110f2be"
+    },
+    "additional_visual_checks": 36,
+    "additional_visual_screenshots": 20,
+    "visual_report_sha256": "d92328b5c3933905b5efc37678a141513dcd21281aac71b8510ab5ca04694132",
+    "visual_harness_sha256": "b8ccd8508f6e265f4be5458de1ba843c4ab7886b8df58aecef8507d81b68fdc3",
+    "not_verified": [
+      "real iPad/Safari",
+      "screenreader",
+      "external AI responses",
+      "human learning outcomes",
+      "public deployment",
+      "new subpath export",
+      "public redistribution basis for the historical image"
+    ]
+  }
+}

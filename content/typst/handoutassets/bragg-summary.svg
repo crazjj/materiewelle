@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="710" height="330" viewBox="0 0 710 330" role="img">
+  <title>Bragg-Gangunterschied an zwei parallelen Netzebenen</title>
+  <desc>A und B sind Streupunkte. P und Q sind die Lotfußpunkte von A auf den unteren einfallenden und auslaufenden Strahlabschnitten. PB und BQ sind die Zusatzwege, d ist der Ebenenabstand und θ_B der Winkel zur Ebene.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse">
+      <path d="M0 0L8 4L0 8Z" fill="#175976"/>
+    </marker>
+  </defs>
+  <rect width="710" height="330" fill="#fff"/>
+  <!-- Exact 30° construction: A=(350,120), B=(350,240), d=120.
+       Labels occupy free zones; leaders stop short of both letters and points. -->
+  <g fill="none" stroke="#175976" stroke-width="2" stroke-linecap="round">
+    <line x1="20" y1="120" x2="630" y2="120"/>
+    <line x1="20" y1="240" x2="630" y2="240"/>
+    <line x1="230" y1="50.717968" x2="350" y2="120" marker-end="url(#arrow)"/>
+    <line x1="350" y1="120" x2="470" y2="50.717968" marker-end="url(#arrow)"/>
+    <line x1="70" y1="78.341925" x2="350" y2="240" marker-end="url(#arrow)"/>
+    <line x1="350" y1="240" x2="625" y2="81.228676" marker-end="url(#arrow)"/>
+    <path d="M350 120L298.038476 210 M350 120L401.961524 210" stroke-dasharray="5 5"/>
+    <path d="M306.698730 215L311.698730 206.339746L303.038476 201.339746 M393.301270 215L388.301270 206.339746L396.961524 201.339746"/>
+    <path d="M276 120A74 74 0 0 1 285.914120 83" stroke="#b06b1d"/>
+    <path d="M641 120H670 M641 240H670" stroke-width="1"/>
+    <line x1="661" y1="123" x2="661" y2="237" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+  </g>
+  <g fill="none" stroke="#5b6064" stroke-width="1.4" stroke-linecap="round">
+    <path d="M350 84V108 M244 212L288 210 M456 212L412 210 M350 252V276"/>
+  </g>
+  <g font-family="DejaVu Sans, sans-serif" font-size="32" fill="#183143">
+    <text x="350" y="64" text-anchor="middle">A</text>
+    <text x="220" y="219" text-anchor="middle">P</text>
+    <text x="480" y="219" text-anchor="middle">Q</text>
+    <text x="350" y="309" text-anchor="middle">B</text>
+    <text x="220" y="100">θ<tspan dy="8" font-size="22">B</tspan></text>
+    <text x="684" y="188">d</text>
+  </g>
+</svg>

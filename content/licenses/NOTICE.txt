@@ -1,0 +1,39 @@
+Materiewelle — notices for distributed web files and the handout
+
+Own program code is licensed under MIT; see LICENSE.txt (web archive) or the
+LICENSE file in https://github.com/crazjj/materiewelle.
+This does not grant a license to third-party material or independent educational
+text. Source and scope: https://github.com/crazjj/materiewelle/blob/master/THIRD-PARTY-NOTICES.md
+
+The historical Jönsson image is from C. Jönsson, Electron Diffraction at Multiple
+Slits, American Journal of Physics 42, 4–11 (1974), DOI 10.1119/1.1987592.
+It is not an own photograph, not MIT-licensed, and no public-domain status is
+claimed. The documented basis for public redistribution remains unresolved.
+Source details: https://github.com/crazjj/materiewelle/blob/master/content/sources/README.md
+
+Latin Modern font licenses and copyright notices accompany the web fonts in
+fonts/LatinModern-LICENSE.txt and fonts/LatinModern-COPYRIGHT.txt.
+The handout embeds DejaVu Sans. Its Bitstream/DejaVu license is included in
+fonts/DejaVu-LICENSE.txt in the web archive and in the release START.md.
+Upstream: https://dejavu-fonts.github.io/
+
+The release handout and web archives are generated outputs. AI agents assisted
+with design, implementation and verification; this is not evidence of a learner's
+own calculations or measurements. Process: https://github.com/crazjj/materiewelle/blob/master/docs/ENTSTEHUNG.md
+
+Kobweb and Silk 0.23.3: Varabyte, Apache License 2.0.
+License source: https://github.com/varabyte/kobweb/blob/v0.23.3/LICENSE
+The complete license is included as Apache-2.0.txt.
+
+GitHub mark: Primer Octicons v19.0.0, Copyright (c) 2023 GitHub Inc.
+Unmodified mark-github-16 path, represented through the Kotlin SVG adapter.
+Source: https://github.com/primer/octicons/blob/v19.0.0/icons/mark-github-16.svg
+The complete MIT notice is included as Octicons-LICENSE.txt.
+
+Kotlin standard library 2.2.20, kotlinx.serialization 1.9.0 and Compose for Web
+1.8.0 use the Apache License 2.0 (Apache-2.0.txt). Exact upstream license sources:
+https://github.com/JetBrains/kotlin/blob/v2.2.20/license/LICENSE.txt
+https://github.com/Kotlin/kotlinx.serialization/blob/v1.9.0/LICENSE.txt
+https://github.com/JetBrains/compose-multiplatform/blob/v1.8.0/LICENSE.txt
+These direct dependency licenses were inspected; this is not a complete audit
+of every transitive dependency or build-only tool.

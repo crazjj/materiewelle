@@ -1,0 +1,206 @@
+[
+  {
+    "id": "energy-gain",
+    "alt": "Kinetische Energie E kin gleich e mal U; elektrische Arbeit liefert den Energiegewinn.",
+    "source": "energy(E_\"kin\") = energy(e U)",
+    "roles": [
+      "energy"
+    ]
+  },
+  {
+    "id": "kinetic-momentum",
+    "alt": "Nichtrelativistisch: kinetische Energie E kin gleich Impuls p zum Quadrat geteilt durch zwei Elektronenmassen.",
+    "source": "energy(E_\"kin\") = momentum(p)^2 / (2 m_e)",
+    "roles": [
+      "energy",
+      "momentum"
+    ]
+  },
+  {
+    "id": "kinetic-balance",
+    "alt": "Nichtrelativistische Energiebilanz: p zum Quadrat durch zwei m e gleich e mal U.",
+    "source": "momentum(p)^2 / (2 m_e) = energy(e U)",
+    "roles": [
+      "energy",
+      "momentum"
+    ]
+  },
+  {
+    "id": "momentum",
+    "alt": "Impuls p gleich Quadratwurzel aus zwei mal Elektronenmasse mal e mal U.",
+    "source": "momentum(p) = sqrt(2 m_e energy(e U))",
+    "roles": [
+      "energy",
+      "momentum"
+    ]
+  },
+  {
+    "id": "de-broglie",
+    "alt": "De-Broglie-Hypothese: Wellenlänge Lambda gleich Plancksches Wirkungsquantum h geteilt durch Impuls p.",
+    "source": "wave(lambda) = h / momentum(p)",
+    "roles": [
+      "momentum",
+      "wave"
+    ]
+  },
+  {
+    "id": "wavelength-voltage",
+    "alt": "Nichtrelativistisch und Start aus Ruhe: Lambda gleich h geteilt durch die Quadratwurzel aus zwei m e e U.",
+    "source": "wave(lambda) = h / sqrt(2 m_e energy(e U))",
+    "roles": [
+      "energy",
+      "wave"
+    ]
+  },
+  {
+    "id": "scaling",
+    "alt": "Nichtrelativistische Skalierung: Bei vierfacher Beschleunigungsspannung halbiert sich die Wellenlänge.",
+    "source": "wave(lambda)(4 U) = frac(wave(lambda)(U), 2)",
+    "roles": [
+      "wave"
+    ]
+  },
+  {
+    "id": "bragg-leg",
+    "alt": "Eine der beiden Bragg-Zusatzstrecken: Delta s eins gleich d mal Sinus des Bragg-Winkels zur Ebene.",
+    "source": "delta s_1 = d sin(theta_B)",
+    "roles": []
+  },
+  {
+    "id": "bragg-sine",
+    "alt": "Im rechtwinkligen Dreieck A P B: Sinus Theta B gleich Länge P B durch Länge A B, gleich Länge P B durch den Ebenenabstand d.",
+    "source": "sin(theta_B) = frac(\"PB\", \"AB\") = frac(\"PB\", d)",
+    "roles": []
+  },
+  {
+    "id": "geometry-point-a",
+    "alt": "Punkt A",
+    "source": "\"A\"",
+    "roles": []
+  },
+  {
+    "id": "geometry-point-p",
+    "alt": "Punkt P",
+    "source": "\"P\"",
+    "roles": []
+  },
+  {
+    "id": "geometry-segment-ab",
+    "alt": "Strecke von A nach B",
+    "source": "\"AB\"",
+    "roles": []
+  },
+  {
+    "id": "geometry-segment-pb",
+    "alt": "Strecke von P nach B",
+    "source": "\"PB\"",
+    "roles": []
+  },
+  {
+    "id": "bragg",
+    "alt": "Bragg-Bedingung: zwei d mal Sinus des Winkels Theta B zur Netzebene gleich n Lambda.",
+    "source": "2 d sin(theta_B) = n wave(lambda)",
+    "roles": [
+      "wave"
+    ]
+  },
+  {
+    "id": "surface",
+    "alt": "Getrenntes Oberflächenmodell bei normalem Einfall: D mal Sinus des Winkels Phi zur äußeren Normalen gleich n Lambda.",
+    "source": "D sin(phi) = n wave(lambda)",
+    "roles": [
+      "wave"
+    ]
+  },
+  {
+    "id": "surface-spacing",
+    "alt": "Gewählte Ni-111-Oberflächenreihen: Abstand D gleich kubischer Gitterparameter a mal Quadratwurzel aus drei Achteln.",
+    "source": "D = a sqrt(3/8)",
+    "roles": []
+  },
+  {
+    "id": "fringe-spacing",
+    "alt": "Im jeweils begründeten Fraunhofer-Modell: benachbarter Maximaabstand Delta y ungefähr Skalenlänge L mal Lambda geteilt durch Spaltmittenabstand g.",
+    "source": "Delta y approx L wave(lambda) / g",
+    "roles": [
+      "wave"
+    ]
+  },
+  {
+    "id": "envelope",
+    "alt": "Erstes Minimum der Einspalthülle: Spaltbreite b mal Sinus des Winkels Theta gleich Lambda.",
+    "source": "b sin(theta) = wave(lambda)",
+    "roles": [
+      "wave"
+    ]
+  },
+  {
+    "id": "relativistic",
+    "alt": "Relativistisch und Start aus Ruhe: Lambda rel gleich h durch die Quadratwurzel aus zwei m e e U mal der Korrekturklammer eins plus e U durch zwei m e c Quadrat.",
+    "source": "wave(lambda)_\"rel\" = h / sqrt(2 m_e energy(e U) (1 + energy(e U) / (2 m_e c^2)))",
+    "roles": [
+      "energy",
+      "wave"
+    ]
+  },
+  {
+    "id": "bragg-focus-angle",
+    "alt": "Bragg-Bedingung; hervorgehoben ist der Winkel Theta B zur Netzebene.",
+    "source": "2 d sin(geofocus(theta_B)) = n wave(lambda)",
+    "roles": [
+      "geometry-focus",
+      "wave"
+    ],
+    "layout_base": "bragg"
+  },
+  {
+    "id": "bragg-focus-spacing",
+    "alt": "Bragg-Bedingung; hervorgehoben ist der senkrechte Netzebenenabstand d.",
+    "source": "2 geofocus(d) sin(theta_B) = n wave(lambda)",
+    "roles": [
+      "geometry-focus",
+      "wave"
+    ],
+    "layout_base": "bragg"
+  },
+  {
+    "id": "bragg-focus-path",
+    "alt": "Bragg-Bedingung; hervorgehoben ist der gesamte geometrische Gangunterschied aus zwei Zusatzwegen.",
+    "source": "geofocus(2 d sin(theta_B)) = n wave(lambda)",
+    "roles": [
+      "geometry-focus",
+      "wave"
+    ],
+    "layout_base": "bragg"
+  },
+  {
+    "id": "surface-focus-angle",
+    "alt": "Oberflächenmodell; hervorgehoben ist Phi, der Winkel zur äußeren Oberflächennormalen.",
+    "source": "D sin(geofocus(phi)) = n wave(lambda)",
+    "roles": [
+      "geometry-focus",
+      "wave"
+    ],
+    "layout_base": "surface"
+  },
+  {
+    "id": "surface-focus-spacing",
+    "alt": "Oberflächenmodell; hervorgehoben ist D, der Abstand der ausgewählten Oberflächenreihen.",
+    "source": "geofocus(D) sin(phi) = n wave(lambda)",
+    "roles": [
+      "geometry-focus",
+      "wave"
+    ],
+    "layout_base": "surface"
+  },
+  {
+    "id": "surface-focus-path",
+    "alt": "Oberflächenmodell bei normalem Einfall; hervorgehoben ist der auslaufende Gangunterschied.",
+    "source": "geofocus(D sin(phi)) = n wave(lambda)",
+    "roles": [
+      "geometry-focus",
+      "wave"
+    ],
+    "layout_base": "surface"
+  }
+]

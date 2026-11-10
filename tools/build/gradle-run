@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -euo pipefail
+TASK_TOOLS_ROOT="${TASK_TOOLS_ROOT:-${XDG_CACHE_HOME:-$HOME/.cache}/materiewelle-tools}"
+export TASK_TOOLS_ROOT
+export JAVA_HOME="$TASK_TOOLS_ROOT/jdk-21"
+export GRADLE_USER_HOME="$TASK_TOOLS_ROOT/gradle-home"
+export npm_config_cache="$TASK_TOOLS_ROOT/npm-cache"
+export PLAYWRIGHT_BROWSERS_PATH="${PLAYWRIGHT_BROWSERS_PATH:-$TASK_TOOLS_ROOT/playwright-browsers}"
+export PATH="$JAVA_HOME/bin:$PATH"
+mapfile -t network_options < <(python3 - <<'PY'
+import os,urllib.parse
+for protocol in ['http','https']:
+    parsed=urllib.parse.urlparse(os.environ.get(protocol.upper()+'_PROXY',''))
+    if parsed.hostname:
+        print('-D'+protocol+'.proxyHost='+parsed.hostname)
+        print('-D'+protocol+'.proxyPort='+str(parsed.port or 80))
+PY
+)
+trust_options=()
+TASK_JAVA_TRUSTSTORE="${TASK_JAVA_TRUSTSTORE:-/etc/ssl/certs/java/cacerts}"
+if [[ -f "$TASK_JAVA_TRUSTSTORE" ]]; then
+  trust_options+=("-Djavax.net.ssl.trustStore=$TASK_JAVA_TRUSTSTORE")
+fi
+exec flock --close "$TASK_TOOLS_ROOT/build.lock" "$TASK_TOOLS_ROOT/gradle-8.14.3/bin/gradle" --no-daemon --console=plain --max-workers=2 "${trust_options[@]}" "${network_options[@]}" "$@"

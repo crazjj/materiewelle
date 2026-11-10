@@ -1,0 +1,35 @@
+name: Validate current product
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/setup
+      - name: Test delivery contracts
+        run: |
+          for test in .github/scripts/test-*.py; do python "$test"; done
+      - name: Test sources and build both static exports
+        run: .github/scripts/validate-product.sh
+      - name: Verify all six root suites and three subpath suites
+        run: python .github/scripts/run-ci.py --log release-evidence/browser-ci.log -- python .github/scripts/check-release-web.py
+      - name: Save browser screenshots and reports for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-evidence-${{ github.sha }}
+          path: release-evidence/
+          if-no-files-found: warn
+          retention-days: 14

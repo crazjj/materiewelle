@@ -1,0 +1,17 @@
+.gradle/
+.kotlin/
+build/
+**/build/
+**/.kobweb/server/
+**/.kobweb/site/
+node_modules/
+
+dist/
+__pycache__/
+
+dist-subpath/
+
+.build-static.lock
+
+dist-run-two/
+dist-run-two-subpath/

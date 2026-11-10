@@ -1,0 +1,143 @@
+{
+  "canonical_files_after": {
+    "content/typst/handout.typ": "0906674847cbf2d08ec8abbc81656abed7f950e286b5168a79adad1065b4b1cb",
+    "docs/handout.pdf": "8e9d7f305660f1cb8d0beee5309f0f821adb4f43a6d26f19b162472385ce6995"
+  },
+  "canonical_files_before": {
+    "content/typst/handout.typ": "0906674847cbf2d08ec8abbc81656abed7f950e286b5168a79adad1065b4b1cb",
+    "docs/handout.pdf": "8e9d7f305660f1cb8d0beee5309f0f821adb4f43a6d26f19b162472385ce6995"
+  },
+  "canonical_files_unchanged": true,
+  "canonical_selection": null,
+  "kind": "materiewellen-handout-preview-variants",
+  "preview_ppi": 140,
+  "source_inputs": [
+    {
+      "path": "content/typst/varianten/build.py",
+      "sha256": "029438739fbd9436e827d29be28b2b989688b5cf633effe8a48bd08a4bf0176c"
+    },
+    {
+      "path": "content/typst/varianten/requirements.txt",
+      "sha256": "07af037c6dad3969250c461f7a48b20e2946c268a6c4a2c9cba688b9fd26a59a"
+    },
+    {
+      "path": "content/typst/varianten/A.typ",
+      "sha256": "175ce330a2a17425c9a37acb8463f9a7e6865a6b962ba5af39a0dd3a6a793f46"
+    },
+    {
+      "path": "content/typst/varianten/B.typ",
+      "sha256": "6f429333fdaccb44457e5a3c1fee9022e84da334374878f4d8b3c1cfb726b3a2"
+    },
+    {
+      "path": "content/typst/fachwerte.typ",
+      "sha256": "7855bce0f79e5db239213f806de97bef6825e486031de2d1b51cc733080695b9"
+    },
+    {
+      "path": "content/typst/vorlage.typ",
+      "sha256": "89675337c7e96a7a4e56c251bd9b1caf9cd968337e804551e06c540348723fe4"
+    },
+    {
+      "path": "content/typst/auswahl.json",
+      "sha256": "248dbfabcfb1407ff626254e66844adf2b709614225e9c51f3b97714ccef1b3e"
+    },
+    {
+      "path": "content/typst/handoutassets/bragg-summary.svg",
+      "sha256": "05380f0d7ab4858202bf3bef1f1cec0fd261144e947edd79ed7bde249c0dd819"
+    },
+    {
+      "path": "content/data/versuchsdaten.json",
+      "sha256": "2ac37363e50033c411165eb2eefe8ff61a71244f9046fd77b20846f55f5436aa"
+    }
+  ],
+  "typst_python_version": "0.14.2",
+  "variants": {
+    "A": {
+      "bytes": 161638,
+      "overview": "A-uebersicht.png",
+      "page_previews": [
+        "A-seite-1.png",
+        "A-seite-2.png",
+        "A-seite-3.png"
+      ],
+      "pdf": "A.pdf",
+      "repeat_compile_identical": true,
+      "sha256": "3ae5fa9d064a00992a645df430a85a6adc276150fe803ed10717af758b627498",
+      "source": "content/typst/varianten/A.typ",
+      "validation": {
+        "compiler_warnings": 0,
+        "displayed_control_values": {
+          "DG_NR_nm": "0,167",
+          "DG_geo_nm": "0,165",
+          "DG_signed_difference_percent": "-1,1",
+          "D_nm": "0,2156",
+          "NR_over_rel_percent": "2,42",
+          "image_period_px": "13,7",
+          "lambda_150V_pm": "100,137",
+          "lambda_50kV_NR_pm": "5,485",
+          "lambda_50kV_rel_pm": "5,355",
+          "lambda_600V_pm": "50,069"
+        },
+        "extractable_words": 1260,
+        "fonts_embedded": [
+          "LMRoman10-Regular-Identity-H",
+          "LMRoman10-Bold-Identity-H",
+          "LatinModernMath-Regular-Identity-H",
+          "LMRoman10-Italic-Identity-H",
+          "DejaVuSans"
+        ],
+        "note": "Page bounds checked automatically; inspect PNG previews for collisions and reading order.",
+        "page_size_pt": [
+          595.276,
+          841.89
+        ],
+        "pages": 3,
+        "paper": "A4",
+        "text_inside_page": true
+      }
+    },
+    "B": {
+      "bytes": 113211,
+      "overview": "B-uebersicht.png",
+      "page_previews": [
+        "B-seite-1.png",
+        "B-seite-2.png",
+        "B-seite-3.png"
+      ],
+      "pdf": "B.pdf",
+      "repeat_compile_identical": true,
+      "sha256": "f1e800961c3f30dc5e7420968559bd06a5d1ce57f1e9630f5e34798c014c0ac5",
+      "source": "content/typst/varianten/B.typ",
+      "validation": {
+        "compiler_warnings": 0,
+        "displayed_control_values": {
+          "DG_NR_nm": "0,167",
+          "DG_geo_nm": "0,165",
+          "DG_signed_difference_percent": "-1,1",
+          "D_nm": "0,2156",
+          "NR_over_rel_percent": "2,42",
+          "image_period_px": "13,7",
+          "lambda_150V_pm": "100,137",
+          "lambda_50kV_NR_pm": "5,485",
+          "lambda_50kV_rel_pm": "5,355",
+          "lambda_600V_pm": "50,069"
+        },
+        "extractable_words": 1213,
+        "fonts_embedded": [
+          "LMRoman10-Regular-Identity-H",
+          "LMRoman10-Bold-Identity-H",
+          "LatinModernMath-Regular-Identity-H",
+          "DejaVuSans",
+          "LMRoman10-Italic-Identity-H"
+        ],
+        "note": "Page bounds checked automatically; inspect PNG previews for collisions and reading order.",
+        "page_size_pt": [
+          595.276,
+          841.89
+        ],
+        "pages": 3,
+        "paper": "A4",
+        "text_inside_page": true
+      }
+    }
+  }
+}
